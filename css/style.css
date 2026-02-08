@@ -1,12 +1,35 @@
-/*p{
-     font-style: oblique;
-}斜体*/
-/*p{
-     color:rgb(52,150,150)/*等价于#00BFFF后面再加两位16进制也表示透明度（0~255） rgba后面的代表的是透明度(52,150,150,0.5)*/
-/*}RGB值，三原色（红绿蓝（0，0，0是纯黑）（255，255，255是白色））*/
-/*p{
-    text-indent:2em;这个是空格，给文章开头空两格
+/*span{
+    text-decoration: overline;line-through（和标签<s>作用相同;underline;(分别是上划线；中划线和下划线）
 }*/
-/*p{
-    text-align（只针对于块级元素里的行内元素）: left;right;center;justify;(分别是居左，居右，中间,对齐)
+/*span {
+    text-decoration: underline red solid（实心线）；dotted（点状线）;wavy(波浪线）;dashed（虚线）;double（双实线）
 }*/
+/*span {*/
+/*    text-decoration: underline red solid 10px;*/
+/*}*/
+/*p a{*/
+/*    text-decoration: none;*/
+/*}*/
+/*p{
+   text-transform: capitalize（每一个单词首字母大写）；lowercase(小写）；uppercase(大写）;
+}*/
+/*p{*/
+/*    line-height: 1.8;*/
+/*}*/
+/*p{*/
+/*    letter-spacing: 15px;
+/*}*/
+/*p{*/
+/*    word-spacing: 15px;!*每个字母之间的距离*!*/
+/*}*/
+/*p{*/
+/*    word-break: break-all;(对于单词来说强制切断)*/
+/*}*/
+/*p{*/
+/*    word-break: normal;*/
+/*    overflow-wrap: break-word;(用于超长单词)*/
+/*}*/
+/*p {*/
+/*    word-break: normal;*/
+/*    text-wrap: wrap;（控制文本是否换行）；balance（保持一致）*/
+/*}*/

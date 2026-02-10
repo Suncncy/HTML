@@ -1,14 +1,47 @@
-/*p{*/
-/*    white-space: pre;在展示的小页面不可换行*/
+/*.box{*/
+/*    width:300px;*/
+/*    height:100px;*/
 /*}*/
-/*p{*/
-/*    white-space: pre-wrap;在展示的页面可以换行*/
+/*.box{*/
+/*    width:fit-content;(适应文本的长度)*/
+/*    height:100px;(这个也可以改成fit-content)*/
 /*}*/
-/*p{*/
-/*    white-space: pre-line;在展示页面无空格，但是可以换行*/
-/*}（nowrap和text-wrap）的作用一致*/
-/*fond-size：文本大小，默认16；fond-family：字体系列；font-weight：字重，默认400；fond-style：字体是正还是斜；text-indent：是控制缩进的；text-align：是靠左靠右对齐
-text-decoration：文本修饰，加下划线或者什么线；letter-spacing：控制文本的间距；line-height：设置文本的行高；word-spacing：每个单词内部字母的间距；
->这个符号只能选中p里面的一层，“ ”空格能全部选择；+是下层相邻的兄弟，~是相邻上下层的兄弟；*=是选中带后面元素的内容；^=是选中以后面元素开头的元素；$=是选中以后面元素结尾的元素
-~=有后面的元素就行，空格
- */
+/*.box{*/
+/*    width:min-content;(最短的长度，max-content是最长的)*/
+/*    height:100px;*/
+/*}*/
+.outer-box{
+    width: 400px;
+    height:100px;
+    background-color: aqua;
+}
+.inner-box{
+    height: 50%;
+    width: 50%;
+    background-color: darkkhaki;
+}
+/*body{*/
+/*    width: 200px;（里面的代码所写的页面）*/
+/*html{*/
+/*    width: 150px;（就是可以全部展示的页面*/
+/*}*/
+/*.highlight{*/
+/*    background-color: deeppink;*/
+/*}给重要文字添加背景颜色*/
+/*.HelloKitty {*/
+/*    width: 800px;   !* 设置宽度 *!*/
+/*    height: 600px;  !* 设置高度 *!*/
+/*    background-image: url("../img/1.jpg");!*.表示当前目录，..表示返回上一级目录）*/
+/*    background-size: cover;       !* 背景图铺满 *!*/
+/*    background-repeat: no-repeat; !* 不重复 *!*/
+/*    background-position: center;  !* 居中显示 *!*/
+/*}*/
+.HelloKitty {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/1.jpg");
+    background-size: contain;  /* 让背景图完整显示，保持比例 */
+    background-repeat: no-repeat;
+    background-position: center;（和size一块写的时候，必须得加一个斜杠）
+}
+

@@ -1,35 +1,14 @@
-/*span{
-    text-decoration: overline;line-through（和标签<s>作用相同;underline;(分别是上划线；中划线和下划线）
-}*/
-/*span {
-    text-decoration: underline red solid（实心线）；dotted（点状线）;wavy(波浪线）;dashed（虚线）;double（双实线）
-}*/
-/*span {*/
-/*    text-decoration: underline red solid 10px;*/
-/*}*/
-/*p a{*/
-/*    text-decoration: none;*/
-/*}*/
-/*p{
-   text-transform: capitalize（每一个单词首字母大写）；lowercase(小写）；uppercase(大写）;
-}*/
 /*p{*/
-/*    line-height: 1.8;*/
+/*    white-space: pre;在展示的小页面不可换行*/
 /*}*/
 /*p{*/
-/*    letter-spacing: 15px;
+/*    white-space: pre-wrap;在展示的页面可以换行*/
 /*}*/
 /*p{*/
-/*    word-spacing: 15px;!*每个字母之间的距离*!*/
-/*}*/
-/*p{*/
-/*    word-break: break-all;(对于单词来说强制切断)*/
-/*}*/
-/*p{*/
-/*    word-break: normal;*/
-/*    overflow-wrap: break-word;(用于超长单词)*/
-/*}*/
-/*p {*/
-/*    word-break: normal;*/
-/*    text-wrap: wrap;（控制文本是否换行）；balance（保持一致）*/
-/*}*/
+/*    white-space: pre-line;在展示页面无空格，但是可以换行*/
+/*}（nowrap和text-wrap）的作用一致*/
+/*fond-size：文本大小，默认16；fond-family：字体系列；font-weight：字重，默认400；fond-style：字体是正还是斜；text-indent：是控制缩进的；text-align：是靠左靠右对齐
+text-decoration：文本修饰，加下划线或者什么线；letter-spacing：控制文本的间距；line-height：设置文本的行高；word-spacing：每个单词内部字母的间距；
+>这个符号只能选中p里面的一层，“ ”空格能全部选择；+是下层相邻的兄弟，~是相邻上下层的兄弟；*=是选中带后面元素的内容；^=是选中以后面元素开头的元素；$=是选中以后面元素结尾的元素
+~=有后面的元素就行，空格
+ */

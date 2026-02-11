@@ -1,47 +1,49 @@
+/*!*.box{*!*/
+/*!*    width: 300px;*!*/
+/*!*    height: 100px;*!*/
+/*!*    background-color: lightseagreen;*!*/
+/*!*    border: 3px solid pink;*!*/
+/*!*    !*border-left: 3px solid pink;上下左右都可以改成top，left，right，botton，会覆盖上面的border的颜色*!*!*/
+/*!*    !*border-width: 3px;*!*!*/
+/*!*    !*border-style:groove;!*(可以换样式)*!*!*!*/
+/*!*    !*border-color: deeppink;*!*!*/
+/*!*    !*border-radius: 40px;!*将四角换成圆的,最大半径是height的一半*!*!*!*/
+/*!*    !*border-top-left-radius: 100px;(左上角的弧度)*!*!*/
+/*!*!*    border-radius: 100px 20px;(左上+右下，，，右上+左下)*!*!*/
+/*!*!*    border-radius: 100px 20px 10px;(左上，，，右上+左下...右下)*!*!*/
+/*!*!*    border-radius: 100px 20px 10px 10px;(分别作用于四个角，是顺时针方向)*!*!*/
+/*!*    border-radius: 10px 20px 30px 20px/10px 20px 30px 20px;(先是横着，再是竖着，以四角为圆心，然后画圆)*!*/
+/*---------------------------------------------------------*/
+/*!*}*!*/
 /*.box{*/
 /*    width:300px;*/
 /*    height:100px;*/
+/*    background-color:lightseagreen;*/
+/*    padding: 20px;!*隔开文本与边框的距离，也可以top，botton等等方位，也可以一个，两个，三个，四个，按照顺序进行设置边框，如果是改成百分制来计算，它的长和宽全部都是根据父级盒子的宽来决定，对于行内元素，只会对左右有效果*!*/
+/*    border:3px solid deeppink;*/
+/*    box-sizing: border-box;!*是将边框全部算进来，符合设置的长和宽*!*/
+/*    -----------------------------------------------*/
 /*}*/
-/*.box{*/
-/*    width:fit-content;(适应文本的长度)*/
-/*    height:100px;(这个也可以改成fit-content)*/
+
+/*.outer-box{*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    background-color: red;*/
 /*}*/
-/*.box{*/
-/*    width:min-content;(最短的长度，max-content是最长的)*/
-/*    height:100px;*/
+/*.inner-box{*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*    background-color: lightseagreen;*/
+/*    margin-top: 20px;!*这是margin的折中效果，会对margin会有特殊的效果，在外层盒子中加padding-top，或者border-top，BFC*!*/
+
+/*}*/
+/*.HelloKitty{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background-color: red;*/
+/*    margin: auto;!*居中效果*!*/
 /*}*/
 .outer-box{
-    width: 400px;
-    height:100px;
-    background-color: aqua;
-}
-.inner-box{
-    height: 50%;
-    width: 50%;
-    background-color: darkkhaki;
-}
-/*body{*/
-/*    width: 200px;（里面的代码所写的页面）*/
-/*html{*/
-/*    width: 150px;（就是可以全部展示的页面*/
-/*}*/
-/*.highlight{*/
-/*    background-color: deeppink;*/
-/*}给重要文字添加背景颜色*/
-/*.HelloKitty {*/
-/*    width: 800px;   !* 设置宽度 *!*/
-/*    height: 600px;  !* 设置高度 *!*/
-/*    background-image: url("../img/1.jpg");!*.表示当前目录，..表示返回上一级目录）*/
-/*    background-size: cover;       !* 背景图铺满 *!*/
-/*    background-repeat: no-repeat; !* 不重复 *!*/
-/*    background-position: center;  !* 居中显示 *!*/
-/*}*/
-.HelloKitty {
     width: 200px;
-    height: 200px;
-    background-image: url("../img/1.jpg");
-    background-size: contain;  /* 让背景图完整显示，保持比例 */
-    background-repeat: no-repeat;
-    background-position: center;（和size一块写的时候，必须得加一个斜杠）
+    margin: 20px 0;这种折叠情况在空的盒子里面加有字就行
 }
-

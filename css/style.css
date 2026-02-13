@@ -1,64 +1,34 @@
-/*.box{*/
-/*    width: 200px;*/
-/*    height: 100px;*/
-/*    background-color: red;*/
-/*    white-space: nowrap;*/
-/*    overflow-x:auto;!*hidden(直接隐藏超出部分，可以强制滚动）,clip（裁切掉超出内容）,auto,scroll(强制加滚动条）;*!*/
-/*--------------------------------------*/
-/*}*/
-/*.inner-box{*/
-/*    width: 100px;*/
-/*    height: 50px;*/
-/*    background: lightseagreen;*/
-/*    position:!*sticky粘滞定位; fixed固定定位;absolute绝对//可以加上outer里面的position: relative;;relative相对;*!*/
-/*    top: 30px;*/
-/*}*/
-/*.outer-box{*/
-/*    margin-top: 50px;*/
-/*    width:400px;*/
-/*    height: 2000px;*/
-/*   border: 1px solid #000;*/
-/*    !*position: relative;*!*/
-/*    ---------------------------------------------*/
-/*}*/
-/*.box{*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    position: absolute;*/
-/*}*/
-/*.a{*/
-/*    background-color: lightseagreen;*/
-/*    left: 80px;*/
-/*    top: 80px;*/
-/*    z-index: 20;*/
-/*}*/
-/*.b{*/
-/*    background-color: yellow;*/
-/*    left: 50px;*/
-/*    top: 50px;*/
-/*    z-index: 10;*/
-/*}*/
-/*---------------------------------------------*/
-.box {
-    width: 100px;
-    height: 100px;
-    position: absolute;
+.grid-box{
+    width: 500px;
+    display: grid;
+    gap:1px;
+    /*gap:10px 20px;格子间的间隙*/
+    /*grid-template-columns: 100px 100px;变成两列*/
+    /*grid-template-rows: 50px 50px;从上往下一共2个高度为50px的行*/
+    /*grid-template-columns: 1fr  2fr 1fr;进行比例分割*/
+    /*grid-template-columns: repeat(2, 1fr);几个相同宽度的*/
+    /*grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));自动换几列几行*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+   /*grid-auto-rows: 80px;多余的按照此规格*/
+   /*grid-auto-flow: column;决定排列的方向*/
+   /* justify-items: center;控制小盒子横向的位置*/
+   /* justify-content: center;使大盒子位于横向视图的居中位置*/
+   /* align-items: center;控制小盒子纵向的位置*/
+   /* align-content: center;使大盒子位于纵向视图的居中位置*/
+    grid-template-areas:
+    "header header header"
+    "aside   main   main"
+    "aside footer footer";
+
 }
-.parent{
-    position: relative;
-    z-index: 1;
-}
-.child{
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    z-index: 999;
-    background-color: red;
-}
-.other {
-    position: relative;
-    z-index: 2;
-    left: 80px;
-    top: 80px;
+.grid-item{
+    /*margin: 5px;*/
+    /*width:100px;*/
+    /*height:100px;*/
     background-color: blue;
 }
+.header {grid-area: header;}
+.nav{grid-area: aside;}
+.content {grid-area: main;}
+.footer{grid-area: footer;}

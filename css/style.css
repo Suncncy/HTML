@@ -1,53 +1,9 @@
-.flex-box {
-    display: flex;/*这个是将块级元素改成行级元素inline-flex;*/
-    /*gap:10px;*/
-    /*flex-wrap: wrap;换行属性*/
-    /*flex-wrap: wrap-reverse; 反方向换行*/
-    /*flex-direction: row-reverse; 主轴横着反方向54321*/
-    /*flex-direction: column; 主轴换成竖着排列*/
-    /*flex-direction: column-reverse; 主轴竖着反方向54321*/
-    /*flex-flow: row-reverse wrap;是wrap和direction的缩写*/
-    /*justify-content: center;全部位于视图的中间*/
-    /*justify-content: space-between; 先将两边占据，再往内部添加*/
-    height: 200px;
-    flex-direction: column;
-    background-color: cyan;
-    /*align-items: center;在纵向位于居中位置*/
-
-
+.text.box{
+    /*overflow: hidden;使外部的盒子不会跟着内部的盒子跑，不会导致两个盒子的margin折叠*/
 }
-/*.flex-item {*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    background: yellowgreen ;*/
-/*    !*flex-basis: 150px;拉宽的宽度，和width的作用基本雷同*!*/
-/*    !*flex-grow: 1;每个盒子被拉伸*!*/
-/*    !*flex-shrink: 1;内部小盒子等比例缩小*!*/
-/*    !*flex:1 0 auto;分别代表的是 grow shrink basis*!*/
-/*}*/
-.flex-item1 {
+.flex-item{
+    width: 50px;
     height: 50px;
-    background-color: #CFE0F9;
-}
-.flex-item2 {
-display: flex;
-flex: 1;
-background-color: gray;
-}
-.flex-item3 {
-    width:100px;
-    background-color: yellow;
-}
-.flex-item4 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-.flex-item5 {
-flex: 1;
-    background-color:green;
-}
-.flex-item6 {
-    height: 100px;
-background-color: red;
+    margin-top: 20px;
+    background-color: red;
 }

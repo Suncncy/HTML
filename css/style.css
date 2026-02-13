@@ -1,34 +1,53 @@
-.grid-box{
-    width: 500px;
-    display: grid;
-    gap:1px;
-    /*gap:10px 20px;格子间的间隙*/
-    /*grid-template-columns: 100px 100px;变成两列*/
-    /*grid-template-rows: 50px 50px;从上往下一共2个高度为50px的行*/
-    /*grid-template-columns: 1fr  2fr 1fr;进行比例分割*/
-    /*grid-template-columns: repeat(2, 1fr);几个相同宽度的*/
-    /*grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));自动换几列几行*/
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-   /*grid-auto-rows: 80px;多余的按照此规格*/
-   /*grid-auto-flow: column;决定排列的方向*/
-   /* justify-items: center;控制小盒子横向的位置*/
-   /* justify-content: center;使大盒子位于横向视图的居中位置*/
-   /* align-items: center;控制小盒子纵向的位置*/
-   /* align-content: center;使大盒子位于纵向视图的居中位置*/
-    grid-template-areas:
-    "header header header"
-    "aside   main   main"
-    "aside footer footer";
+.flex-box {
+    display: flex;/*这个是将块级元素改成行级元素inline-flex;*/
+    /*gap:10px;*/
+    /*flex-wrap: wrap;换行属性*/
+    /*flex-wrap: wrap-reverse; 反方向换行*/
+    /*flex-direction: row-reverse; 主轴横着反方向54321*/
+    /*flex-direction: column; 主轴换成竖着排列*/
+    /*flex-direction: column-reverse; 主轴竖着反方向54321*/
+    /*flex-flow: row-reverse wrap;是wrap和direction的缩写*/
+    /*justify-content: center;全部位于视图的中间*/
+    /*justify-content: space-between; 先将两边占据，再往内部添加*/
+    height: 200px;
+    flex-direction: column;
+    background-color: cyan;
+    /*align-items: center;在纵向位于居中位置*/
+
 
 }
-.grid-item{
-    /*margin: 5px;*/
-    /*width:100px;*/
-    /*height:100px;*/
-    background-color: blue;
+/*.flex-item {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background: yellowgreen ;*/
+/*    !*flex-basis: 150px;拉宽的宽度，和width的作用基本雷同*!*/
+/*    !*flex-grow: 1;每个盒子被拉伸*!*/
+/*    !*flex-shrink: 1;内部小盒子等比例缩小*!*/
+/*    !*flex:1 0 auto;分别代表的是 grow shrink basis*!*/
+/*}*/
+.flex-item1 {
+    height: 50px;
+    background-color: #CFE0F9;
 }
-.header {grid-area: header;}
-.nav{grid-area: aside;}
-.content {grid-area: main;}
-.footer{grid-area: footer;}
+.flex-item2 {
+display: flex;
+flex: 1;
+background-color: gray;
+}
+.flex-item3 {
+    width:100px;
+    background-color: yellow;
+}
+.flex-item4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.flex-item5 {
+flex: 1;
+    background-color:green;
+}
+.flex-item6 {
+    height: 100px;
+background-color: red;
+}

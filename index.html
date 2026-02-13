@@ -7,19 +7,17 @@
 <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">-->
 </head>
 <body>
-<!--<div style="display: inline">南阳理工学院</div>-->
-<!--<span style="display: block">云计算</span>-->
-<div class="grid-box">
-<!--    <div class="grid-item" style="grid-column: 1/3">1</div>第一条线和第三条线连了起来，横着合并-->
-<!--    <div class="grid-item" style="grid-column: span 2">1</div第一条线和第三条线连了起来，横着合并>-->
-<!--    <div class="grid-item" style="grid-column:1/-1">1</div>那一行全部合并-->
-<!--    <div class="grid-item" style="grid-row: 1/3">1</div>第一条线和第三条线连了起来，竖着合并-->
-<!--    <div class="grid-item"style="justify-self: center" >1</div>单独将第一个盒子放在横向居中的位置-->
-<!--    <div class="grid-item" style="align-self: center">1</div>单独将第一个盒子放在纵向居中的位置-->
-    <div class="grid-item header ">1</div>
-    <div class="grid-item nav ">2</div>
-    <div class="grid-item content">3</div>
-    <div class="grid-item footer">4</div>
+<div class="flex-box">
+    <div class="flex-item1 ">1</div>
+    <div class="flex-item2 ">
+        <div class="flex-item3 ">2</div>
+        <div class="flex-item4 ">
+        <div class="flex-item5 ">4</div>
+            <div class="flex-item6 ">5</div>
+        </div>
+    </div>
+<!--    <div class="flex-item "style="align-self: center">4</div>单独设置这个小盒子的位置-->
+<!--    <div class="flex-item " style="flex-shrink: 2">4</div>比css中的1更小 flex-grow是扩大-->
 </div>
 </body>
 </html>

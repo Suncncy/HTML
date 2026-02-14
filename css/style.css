@@ -1,9 +1,108 @@
-.text.box{
-    /*overflow: hidden;使外部的盒子不会跟着内部的盒子跑，不会导致两个盒子的margin折叠*/
+/*a:hover {*/
+/*    color:red;当鼠标放在上面时，链接由蓝色变为红色*/
+/*}*/
+/*div:hover{*/
+/*    background-color: lightgray !important;当鼠标放在上面时，链接由红色变为其他色*/
+/*}*/
+/*a:link{*/
+/*    color: cyan;未访问的链接的颜色设定*/
+/*}*/
+/*a:visited{*/
+/*    color: red;访问后的链接颜色*/
+/*}*/
+/*a:hover{*/
+/*    color: yellowgreen;当鼠标放上去的时候，链接颜色*/
+/*    text-decoration: none;*/
+/*}*/
+/*a:active{*/
+/*    color: purple;当点击时的链接颜色 要按照LVHA的顺序 */
+/*}*/
+/*input:focus{*/
+/*    background: yellowgreen ;点击空格时空格改变的颜色*/
+/*}*/
+/*li:first-child{*/
+/*    background-color: yellowgreen;如果有两个相同的ul，则在ul标签里面加上class，然后在css的li标签前加上.标签*/
+/*}*/
+/*li:last-child{*/
+/*    background-color: yellow;最后一个*/
+/*}*/
+/*li:nth-child(2n){括号里面填数字或者函数*/
+/*    background-color: purple;*/
+/*}*/
+/*.container a:first-child {*/
+/*    background-color: darkmagenta;父元素下的第一个子元素*/
+/*}*/
+/*.container p:first-of-type {*/
+/*    background-color: darkmagenta; 第一个出现要求类型的子元素*/
+/*}*/
+/*.container p:only-child{*/
+/*    background-color:green; 父元素下面只能有一个子元素的时候才适用*/
+/*}*/
+/*ul li:not(:last-child){*/
+/*    background-color: yellowgreen;除了最后一个*/
+/*}*/
+/*div:has(a){*/
+/*    background-color: green; 含有a的变绿色*/
+/*}*/
+/*.div:has(>a){*/
+/*    background-color: aqua;只有必须是div里面直接子元素为a才行*/
+/*}*/
+/*div:has(>a:first-child ){*/
+/*    background-color: darkslategrey;只有当div内第一个子元素是a标签才会变颜色，也可以外面套一个not*/
+/*}*/
+/*input{*/
+/*    border: 1px solid darkblue;*/
+/*    border-radius: 20px;*/
+/*    line-height: 2;*/
+/*    padding:0 12px;*/
+/*    width:200px;不会影响里面的字*/
+/*}*/
+/*input::placeholder {*/
+/*    color: midnightblue;会导致框里面的字改变颜色*/
+/*}*/
+/*li::marker {*/
+/*    content:"*";改变li标签前面的元素*/
+/*}*/
+/*p::first-letter {*/
+/*    font-weight:bold;*/
+/*    font-size:20px;*/
+/*    color: red;p标签的第一个字母或者文字*/
+/*}*/
+/*p::selection {*/
+/*    background-color: darkblue;选中的背景*/
+/*    color: white;选中的字体的颜色*/
+/*}*/
+/*p::before{和after的用法一样*/
+/*    content: "";*/
+/*    width:20px;*/
+/*    height:20px;*/
+/*    display:inline-block;*/
+/*    background:yellow;*/
+/*}*/
+/*.card{*/
+/*    background-color: darkblue;*/
+/*    border-radius: 8px;*/
+/*}*/
+/*.card h2{*/
+/*    font-size: 1.5rem直接转换成下面的例子;*/
+/*    color:#333;*/
+/*}*/
+.card {
+    background-color: cyan;
+    border-radius: 8px;
+    h2{
+        font-size:1.5rem;
+        color:#333;
+    }
+    p{
+        line-height:1.6;
+    }
+    a{
+        color:blue;
+    }
+
 }
-.flex-item{
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
-    background-color: red;
-}
+
+
+
+

@@ -1,88 +1,47 @@
-/*.wrapper {*/
-/*     !*max-width:500px;*!*/
-/*    !*min-width: 200px;*!*/
-/*    width: 80%;*/
-/*    height: 200px;*/
-/*    !*margin: 0 auto;导致盒子居中*!*/
-/*    background-color: cyan;*/
-/*    !*outline-style: dotted;可以按照下面方式进行简单描写，这个标签是位于盒子外面的*!*/
-/*    !*outline-width: 2px;*!*/
-/*    !*outline-color: blue;*!*/
-/*    outline:2px solid purple;*/
-/*    !*border-radius: 50px;控制边角圆环*!*/
-/*    !*outline-offset: 10px;离盒子的边缘的距离*!*/
+/*.box {*/
+    /*width:500px;*/
+    /*height:500px;*/
+    /*background-color: yellow;*/
+    /*border:1px solid grey;*/
+    /*perspective: 500px;添加3D效果*/
+    /*perspective: 500px;*/
+    /*transform:translate(10px,20px);（先是横向移动，再是纵向移动，仅仅是视觉效果）*/
+    /*transform:translateX(20px) 向右移动;*/
+    /*transform:scale(2) ;以自己中心位置，放大或者缩小*/
+    /*transform: scale(0.5,2);先是横着再是纵向*/
+    /*transform:rotate(45deg) 转动角度;*/
+    /*transform:skew(45deg) ;拉着两个角倾斜*/
+    /*transform-origin:left top;将中心点变成左上角，或者改成10px 10px的位置*/
+    /*transform:rotate(45deg) translate(100px) 先旋转后平移，其中的X轴和Y轴也会变化 ;*/
+/*}*/
+.in {
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    /*transition-property: background-color;过度的属性*/
+    transition-property: transform;
+    transition-duration: 0.4s;
+    /*transition-delay: 0.4s;进行延迟效果，一般位于第二个*/
+    /*transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.675)自己控制速度 ;*/
+    /*transition-timing-function: steps(3) 卡三下;*/
+    /*transition-timing-function: ease-in ;前面慢后面快*/
+    /*transition-timing-function: ease-in-out 前面慢后面也慢;*/
+    /*transition-duration: 0.4s;过渡的时间，一般位于第一个*/
+    &:hover{
+        /*background-color:purple;鼠标放上去，会变成紫色*/
+        /*transform:scale(1.5);鼠标放上去，改变大小*/
+    }
+    /*transform:rotateY(80deg) ;得在perspective有的时候使用绕着Y轴转动*/
+    /*transform:translateZ(200px);是画面的靠近靠远得在perspective有的时候*/
+    /*transform:rotateX(45deg);*/
+    /*transform-style: preserve-3d;使in1里面也是3D效果，层层累加*/
+    /*opacity: 0;*透明度，1是完全不透明/
 
-/*}*/
-/*input:focus{*/
-/*    outline:none;会把边框的加粗给去掉*/
-/*}*/
-/*.container {*/
-/*    width:200px;*/
-/*    height:100px;*/
-/*    background-color: #f6a0a0;*/
-    /*box-shadow: 0(横向向左 0（纵向向下 10px（模糊半径，发散 10px（扩散半径 gray;在有外部盒子大于内部盒子且多余的盒子被隐藏的情况下，阴影会被折断，也可以有两个阴影，两个阴影各写一行，中间用逗号隔开*/
-    /*box-shadow: 0 0 50px grey inset;这是内阴影*/
-    /*text-shadow: 0 0 5px black;给文本加阴影*/
-/*}*/
-/*.outer-box {*/
-/*    width:300px;*/
-/*    height:200px;*/
-/*    overflow: hidden;*/
-/*}*/
-/*.container img{*/
-/*    vertical-align: middle;改变图片的位置和基线，行线等对齐*/
-/*}*/
-/*.vip{*/
-/*    display:inline-block;*/
-/*    width:200px;*/
-/*    height:100px;*/
-/*    background-position: -60px 0;*/
-/*    background-image:url("图片的链接") ;*/
-/*.container {*/
-/*    width:200px;*/
-/*    height:100px;*/
-/*    padding:20px;*/
-/*    !*background-image: radial-gradient( circle  at left top ,closest-side,red,blue);镜像*!*/
-/*    !*background-image: linear-gradient(to right,red,blue);，默认从上到下也可以多个颜色，在颜色后面加上百分比，就是这种颜色的占比，这个是从左到右，也可以到右上角（right top），或者改成角度80deg*!*/
-/*    !*background-clip: content-box;只留下内容区*!*/
-/*    !*background-clip: padding-box;裁剪除了内容和padding之外的区域*!*/
-/*}*/
-/*.container {*文字渐变/
-/*    color:transparent;*/
-/*    background-image: linear-gradient(to right,pink ,blue);*/
-/*    background-clip: text;*/
-/*}*/
-/*.container {*/
-/*    !*filter:blur(10px);高斯模糊滤镜*!*/
-/*    !*filter:brightness(0.5) 图片的亮度;*!*/
-/*    !*filter:contrast(100%);对比度*!*/
-/*    !*filter:grayscale(50%) ;调灰度*!*/
-/*    !*filter:invert(100%);反着的颜色*!*/
-/*    !*filter:sepia(100%);复古的颜色*!*/
-/*    !*color:#227fd8;*!*/
-/*    !*filter:hue-rotate(0deg);进行指针改变颜色*!*/
-/*    !*filter:drop-shadow(0 0 4px #000000) 添加阴影;*!*/
-/*    width:200px;*/
-/*    height:200px;*/
-/*    padding:10px 15px;*/
-/*    border-radius: 10px;*/
-/*    border:2px solid #5aa9fd;*/
-/*    background-size: cover;*/
-/*    !*background-image: url("../img/1.jpg");*!*/
-
-/*}*/
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../img/1.jpg');
+     */
 }
-.container {
-    width:150px;
-    height:150px;
-    padding:10px 15px;
-    border-radius:10px;
-    background-color: #ffffff60;
-    /*backdrop-filter: blur(20px);在照片前面添加的卡片进行修饰*/
-}
-
-
+/*.in1 {*/
+/*    width:50px;*/
+/*    height:50px;*/
+/*    background-color: darkblue;*/
+/*    transform:rotateY(45deg);*/
+/*}*/

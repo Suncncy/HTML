@@ -1,108 +1,88 @@
-/*a:hover {*/
-/*    color:red;当鼠标放在上面时，链接由蓝色变为红色*/
-/*}*/
-/*div:hover{*/
-/*    background-color: lightgray !important;当鼠标放在上面时，链接由红色变为其他色*/
-/*}*/
-/*a:link{*/
-/*    color: cyan;未访问的链接的颜色设定*/
-/*}*/
-/*a:visited{*/
-/*    color: red;访问后的链接颜色*/
-/*}*/
-/*a:hover{*/
-/*    color: yellowgreen;当鼠标放上去的时候，链接颜色*/
-/*    text-decoration: none;*/
-/*}*/
-/*a:active{*/
-/*    color: purple;当点击时的链接颜色 要按照LVHA的顺序 */
+/*.wrapper {*/
+/*     !*max-width:500px;*!*/
+/*    !*min-width: 200px;*!*/
+/*    width: 80%;*/
+/*    height: 200px;*/
+/*    !*margin: 0 auto;导致盒子居中*!*/
+/*    background-color: cyan;*/
+/*    !*outline-style: dotted;可以按照下面方式进行简单描写，这个标签是位于盒子外面的*!*/
+/*    !*outline-width: 2px;*!*/
+/*    !*outline-color: blue;*!*/
+/*    outline:2px solid purple;*/
+/*    !*border-radius: 50px;控制边角圆环*!*/
+/*    !*outline-offset: 10px;离盒子的边缘的距离*!*/
+
 /*}*/
 /*input:focus{*/
-/*    background: yellowgreen ;点击空格时空格改变的颜色*/
+/*    outline:none;会把边框的加粗给去掉*/
 /*}*/
-/*li:first-child{*/
-/*    background-color: yellowgreen;如果有两个相同的ul，则在ul标签里面加上class，然后在css的li标签前加上.标签*/
+/*.container {*/
+/*    width:200px;*/
+/*    height:100px;*/
+/*    background-color: #f6a0a0;*/
+    /*box-shadow: 0(横向向左 0（纵向向下 10px（模糊半径，发散 10px（扩散半径 gray;在有外部盒子大于内部盒子且多余的盒子被隐藏的情况下，阴影会被折断，也可以有两个阴影，两个阴影各写一行，中间用逗号隔开*/
+    /*box-shadow: 0 0 50px grey inset;这是内阴影*/
+    /*text-shadow: 0 0 5px black;给文本加阴影*/
 /*}*/
-/*li:last-child{*/
-/*    background-color: yellow;最后一个*/
+/*.outer-box {*/
+/*    width:300px;*/
+/*    height:200px;*/
+/*    overflow: hidden;*/
 /*}*/
-/*li:nth-child(2n){括号里面填数字或者函数*/
-/*    background-color: purple;*/
+/*.container img{*/
+/*    vertical-align: middle;改变图片的位置和基线，行线等对齐*/
 /*}*/
-/*.container a:first-child {*/
-/*    background-color: darkmagenta;父元素下的第一个子元素*/
-/*}*/
-/*.container p:first-of-type {*/
-/*    background-color: darkmagenta; 第一个出现要求类型的子元素*/
-/*}*/
-/*.container p:only-child{*/
-/*    background-color:green; 父元素下面只能有一个子元素的时候才适用*/
-/*}*/
-/*ul li:not(:last-child){*/
-/*    background-color: yellowgreen;除了最后一个*/
-/*}*/
-/*div:has(a){*/
-/*    background-color: green; 含有a的变绿色*/
-/*}*/
-/*.div:has(>a){*/
-/*    background-color: aqua;只有必须是div里面直接子元素为a才行*/
-/*}*/
-/*div:has(>a:first-child ){*/
-/*    background-color: darkslategrey;只有当div内第一个子元素是a标签才会变颜色，也可以外面套一个not*/
-/*}*/
-/*input{*/
-/*    border: 1px solid darkblue;*/
-/*    border-radius: 20px;*/
-/*    line-height: 2;*/
-/*    padding:0 12px;*/
-/*    width:200px;不会影响里面的字*/
-/*}*/
-/*input::placeholder {*/
-/*    color: midnightblue;会导致框里面的字改变颜色*/
-/*}*/
-/*li::marker {*/
-/*    content:"*";改变li标签前面的元素*/
-/*}*/
-/*p::first-letter {*/
-/*    font-weight:bold;*/
-/*    font-size:20px;*/
-/*    color: red;p标签的第一个字母或者文字*/
-/*}*/
-/*p::selection {*/
-/*    background-color: darkblue;选中的背景*/
-/*    color: white;选中的字体的颜色*/
-/*}*/
-/*p::before{和after的用法一样*/
-/*    content: "";*/
-/*    width:20px;*/
-/*    height:20px;*/
+/*.vip{*/
 /*    display:inline-block;*/
-/*    background:yellow;*/
+/*    width:200px;*/
+/*    height:100px;*/
+/*    background-position: -60px 0;*/
+/*    background-image:url("图片的链接") ;*/
+/*.container {*/
+/*    width:200px;*/
+/*    height:100px;*/
+/*    padding:20px;*/
+/*    !*background-image: radial-gradient( circle  at left top ,closest-side,red,blue);镜像*!*/
+/*    !*background-image: linear-gradient(to right,red,blue);，默认从上到下也可以多个颜色，在颜色后面加上百分比，就是这种颜色的占比，这个是从左到右，也可以到右上角（right top），或者改成角度80deg*!*/
+/*    !*background-clip: content-box;只留下内容区*!*/
+/*    !*background-clip: padding-box;裁剪除了内容和padding之外的区域*!*/
 /*}*/
-/*.card{*/
-/*    background-color: darkblue;*/
-/*    border-radius: 8px;*/
+/*.container {*文字渐变/
+/*    color:transparent;*/
+/*    background-image: linear-gradient(to right,pink ,blue);*/
+/*    background-clip: text;*/
 /*}*/
-/*.card h2{*/
-/*    font-size: 1.5rem直接转换成下面的例子;*/
-/*    color:#333;*/
-/*}*/
-.card {
-    background-color: cyan;
-    border-radius: 8px;
-    h2{
-        font-size:1.5rem;
-        color:#333;
-    }
-    p{
-        line-height:1.6;
-    }
-    a{
-        color:blue;
-    }
+/*.container {*/
+/*    !*filter:blur(10px);高斯模糊滤镜*!*/
+/*    !*filter:brightness(0.5) 图片的亮度;*!*/
+/*    !*filter:contrast(100%);对比度*!*/
+/*    !*filter:grayscale(50%) ;调灰度*!*/
+/*    !*filter:invert(100%);反着的颜色*!*/
+/*    !*filter:sepia(100%);复古的颜色*!*/
+/*    !*color:#227fd8;*!*/
+/*    !*filter:hue-rotate(0deg);进行指针改变颜色*!*/
+/*    !*filter:drop-shadow(0 0 4px #000000) 添加阴影;*!*/
+/*    width:200px;*/
+/*    height:200px;*/
+/*    padding:10px 15px;*/
+/*    border-radius: 10px;*/
+/*    border:2px solid #5aa9fd;*/
+/*    background-size: cover;*/
+/*    !*background-image: url("../img/1.jpg");*!*/
 
+/*}*/
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/1.jpg');
 }
-
-
+.container {
+    width:150px;
+    height:150px;
+    padding:10px 15px;
+    border-radius:10px;
+    background-color: #ffffff60;
+    /*backdrop-filter: blur(20px);在照片前面添加的卡片进行修饰*/
+}
 
 

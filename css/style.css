@@ -1,47 +1,100 @@
-/*.box {*/
-    /*width:500px;*/
-    /*height:500px;*/
-    /*background-color: yellow;*/
-    /*border:1px solid grey;*/
-    /*perspective: 500px;添加3D效果*/
-    /*perspective: 500px;*/
-    /*transform:translate(10px,20px);（先是横向移动，再是纵向移动，仅仅是视觉效果）*/
-    /*transform:translateX(20px) 向右移动;*/
-    /*transform:scale(2) ;以自己中心位置，放大或者缩小*/
-    /*transform: scale(0.5,2);先是横着再是纵向*/
-    /*transform:rotate(45deg) 转动角度;*/
-    /*transform:skew(45deg) ;拉着两个角倾斜*/
-    /*transform-origin:left top;将中心点变成左上角，或者改成10px 10px的位置*/
-    /*transform:rotate(45deg) translate(100px) 先旋转后平移，其中的X轴和Y轴也会变化 ;*/
+/*.wrapper {*/
+/*   !*width:calc(100% - 20px);全部视图-20px；*!*/
+/*   !* width:calc(100vw / 2);这个是除法*!*/
+/*    height:100px;*/
+/*    background-color: yellow;*/
 /*}*/
-.in {
-    width: 100px;
-    height: 100px;
-    background-color: cyan;
-    /*transition-property: background-color;过度的属性*/
-    transition-property: transform;
-    transition-duration: 0.4s;
-    /*transition-delay: 0.4s;进行延迟效果，一般位于第二个*/
-    /*transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.675)自己控制速度 ;*/
-    /*transition-timing-function: steps(3) 卡三下;*/
-    /*transition-timing-function: ease-in ;前面慢后面快*/
-    /*transition-timing-function: ease-in-out 前面慢后面也慢;*/
-    /*transition-duration: 0.4s;过渡的时间，一般位于第一个*/
-    &:hover{
-        /*background-color:purple;鼠标放上去，会变成紫色*/
-        /*transform:scale(1.5);鼠标放上去，改变大小*/
-    }
-    /*transform:rotateY(80deg) ;得在perspective有的时候使用绕着Y轴转动*/
-    /*transform:translateZ(200px);是画面的靠近靠远得在perspective有的时候*/
-    /*transform:rotateX(45deg);*/
-    /*transform-style: preserve-3d;使in1里面也是3D效果，层层累加*/
-    /*opacity: 0;*透明度，1是完全不透明/
-
-     */
+/*a::after{在a标签后面加那个a标签所引用的链接*/
+/*    content: attr(href);*/
+/*    display: inline-block;*/
+/*    margin-left:5px;*/
+/*    color:darkgreen;*/
+/*}*/
+/*.wrapper {*/
+    /*width:min(90%,500px);取最小的那个，视图的90%和500px相比较*/
+    /*width:max(90%,300px);取最大的那一个*/
+    /*font-size:clamp(1rem, 2.5vw, 2rem)分别是最小值，首选值，最大值*/
+    /*height:50px;*/
+    /*background-color: darkblue;*/
+/*}*/
+/*!*:root {*!*/
+/*!*   --primary-color: #1109f6;*!*/
+/*!*    --secondary-color:#7bbfed;*!*/
+/*!*    --text-color:#373737;*!*/
+/*!*}*!*/
+/*!*button.in {*!*/
+/*!*    --primary-color:#1109F6FF;这个优先级高于：root里面的优先级*!*/
+/*!*}*!*/
+/*.in {*/
+/*    border:none;*/
+/*    border-radius: 8px;*/
+/*    padding:10px 15px;*/
+/*    color:var(--primary-color );*/
+/*    background-color:var(--secondary-color );*/
+/*}*/
+/*.on {*/
+/*    border:none;*/
+/*    border-radius: 8px;*/
+/*    padding:10px 15px;*/
+/*    color:white;*/
+/*    background-color:var(--primary-color );*/
+/*}*/
+@layer reset,base,component,utilities;
+/*越往后优先级越高*/
+.wrapper{
+    width:300px;
+    height:50px;
+    /*background-color: cyan;*/
+    /*animation-name: Test,Test2  ;*/
+    /*animation-duration: 2s;动画实现的需要时间*/
+    /*animation-timing-function: ease-out ;先快后慢*/
+    /*animation-iteration-count: infinite;无限播放*/
+    /*animation-direction: reverse动画反着来  ;*/
+    /*animation-direction: alternate ;先正着，后反着*/
+    /*animation-direction: alternate-reverse;先反着后正着*/
+   /*animation-fill-mode:forwards ;停在动画的最后一帧，backwards时停在应用的第一帧，both是两者都能应用到*/
+   /* &:hover{*/
+   /*     animation-play-state: paused ;鼠标放上去就会暂停*/
+   /* animation按照name duration timing-function delay iteration-count direction fill-mode play-state按照这个顺序进行简写*/
+   /* }*/
 }
-/*.in1 {*/
-/*    width:50px;*/
-/*    height:50px;*/
-/*    background-color: darkblue;*/
-/*    transform:rotateY(45deg);*/
+/*@media (max-width:500px) {查询屏幕宽度大于500时，背景颜色换成蓝色，是一个判断条件，尽量写在后面*/
+/*.wrapper {也可以换成min-width，作用是相反的*/
+/*    background-color: darkmagenta; 不加max或者min时，那就是一个特定值，500px*/
 /*}*/
+/*}*/
+/*@media print and (max-width : 500px) 在使用print时候才会有反应{*/
+/*    .wrapper{*/
+/*        background-color: darkslateblue;*/
+/*    }*/
+/*}*/
+/*@media(prefers-color-scheme: dark){深色模式*/
+/*    .wrapper{*/
+/*        background-color:blue;*/
+/*    }*/
+/*}*/
+/*@keyframes Test {*/
+/*    0% {transform:translateY(0);}*/
+/*    50% {transform:translateY(200px);}*/
+/*    100% {transform:translateY(500px);}*/
+/*}*/
+/*@keyframes Test2 {*/
+/*    0%{background-color: yellowgreen; }*/
+/*    50%{background-color: deepskyblue; }*/
+/*    100%{background-color: deeppink; }*/
+/*}*/
+@layer utilities{
+    .wrapper{
+        background-color: deeppink;
+    }
+    /*若都使用！important的话优先级低的会转变成高的优先级，如果是没加分层的，那没分层的优先级更高*/
+    /*div.wrapper{*/
+    /*    background-color: deepskyblue;在同一层级内优先级更高*/
+    /*}*/
+}
+@layer component {
+    .wrapper {
+        background-color: yellowgreen !important;
+    }
+}
+/*@important就是引用 @supports @container*/

@@ -1,100 +1,20 @@
-/*.wrapper {*/
-/*   !*width:calc(100% - 20px);全部视图-20px；*!*/
-/*   !* width:calc(100vw / 2);这个是除法*!*/
-/*    height:100px;*/
-/*    background-color: yellow;*/
-/*}*/
-/*a::after{在a标签后面加那个a标签所引用的链接*/
-/*    content: attr(href);*/
-/*    display: inline-block;*/
-/*    margin-left:5px;*/
-/*    color:darkgreen;*/
-/*}*/
-/*.wrapper {*/
-    /*width:min(90%,500px);取最小的那个，视图的90%和500px相比较*/
-    /*width:max(90%,300px);取最大的那一个*/
-    /*font-size:clamp(1rem, 2.5vw, 2rem)分别是最小值，首选值，最大值*/
-    /*height:50px;*/
-    /*background-color: darkblue;*/
-/*}*/
-/*!*:root {*!*/
-/*!*   --primary-color: #1109f6;*!*/
-/*!*    --secondary-color:#7bbfed;*!*/
-/*!*    --text-color:#373737;*!*/
-/*!*}*!*/
-/*!*button.in {*!*/
-/*!*    --primary-color:#1109F6FF;这个优先级高于：root里面的优先级*!*/
-/*!*}*!*/
-/*.in {*/
-/*    border:none;*/
-/*    border-radius: 8px;*/
-/*    padding:10px 15px;*/
-/*    color:var(--primary-color );*/
-/*    background-color:var(--secondary-color );*/
-/*}*/
-/*.on {*/
-/*    border:none;*/
-/*    border-radius: 8px;*/
-/*    padding:10px 15px;*/
-/*    color:white;*/
-/*    background-color:var(--primary-color );*/
-/*}*/
-@layer reset,base,component,utilities;
-/*越往后优先级越高*/
-.wrapper{
-    width:300px;
-    height:50px;
-    /*background-color: cyan;*/
-    /*animation-name: Test,Test2  ;*/
-    /*animation-duration: 2s;动画实现的需要时间*/
-    /*animation-timing-function: ease-out ;先快后慢*/
-    /*animation-iteration-count: infinite;无限播放*/
-    /*animation-direction: reverse动画反着来  ;*/
-    /*animation-direction: alternate ;先正着，后反着*/
-    /*animation-direction: alternate-reverse;先反着后正着*/
-   /*animation-fill-mode:forwards ;停在动画的最后一帧，backwards时停在应用的第一帧，both是两者都能应用到*/
-   /* &:hover{*/
-   /*     animation-play-state: paused ;鼠标放上去就会暂停*/
-   /* animation按照name duration timing-function delay iteration-count direction fill-mode play-state按照这个顺序进行简写*/
-   /* }*/
+table,th,td{
+    border: 1px dashed black;
 }
-/*@media (max-width:500px) {查询屏幕宽度大于500时，背景颜色换成蓝色，是一个判断条件，尽量写在后面*/
-/*.wrapper {也可以换成min-width，作用是相反的*/
-/*    background-color: darkmagenta; 不加max或者min时，那就是一个特定值，500px*/
-/*}*/
-/*}*/
-/*@media print and (max-width : 500px) 在使用print时候才会有反应{*/
-/*    .wrapper{*/
-/*        background-color: darkslateblue;*/
-/*    }*/
-/*}*/
-/*@media(prefers-color-scheme: dark){深色模式*/
-/*    .wrapper{*/
-/*        background-color:blue;*/
-/*    }*/
-/*}*/
-/*@keyframes Test {*/
-/*    0% {transform:translateY(0);}*/
-/*    50% {transform:translateY(200px);}*/
-/*    100% {transform:translateY(500px);}*/
-/*}*/
-/*@keyframes Test2 {*/
-/*    0%{background-color: yellowgreen; }*/
-/*    50%{background-color: deepskyblue; }*/
-/*    100%{background-color: deeppink; }*/
-/*}*/
-@layer utilities{
-    .wrapper{
-        background-color: deeppink;
-    }
-    /*若都使用！important的话优先级低的会转变成高的优先级，如果是没加分层的，那没分层的优先级更高*/
-    /*div.wrapper{*/
-    /*    background-color: deepskyblue;在同一层级内优先级更高*/
-    /*}*/
+table{
+    /*border-collapse: collapse;合并边框*/
+    /*border-collapse: separate; border-spacing: 2px;前面是边框分离，后面是设计边框和边框之间的距离*/
+    border-collapse: collapse;
 }
-@layer component {
-    .wrapper {
-        background-color: yellowgreen !important;
-    }
+th,td{
+/*    padding: 10px;内边框*/
+/*    text-align: center;文字处于内边框的中心位置*/
+    padding: 10px;
+    text-align: center;
 }
-/*@important就是引用 @supports @container*/
+/*tr:nth-child(odd){代表的是奇数，even代表的是偶数*/
+/*    background-color: #eee;*/
+/*} 用aspect-ratio：16/9；来进行视频的比例缩放
+用overscroll-behavior：none进行控制后面的窗口不进行滚动
+在div里面设置style=“user-select:none”就不会被用户选择
+*/

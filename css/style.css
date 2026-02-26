@@ -1,0 +1,160 @@
+
+
+/* ===== 基础重置 ===== */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+
+/* ===== Banner 容器 ===== */
+.hero { width: 100%; }
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: min(72vh, 680px);   /* 桌面端大 Banner */
+  min-height: 420px;
+  overflow: hidden;          /* 不溢出 */
+  background: #000;
+}
+
+/* 轮播列表（绝对叠层：只显示当前项） */
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 单个 slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  padding: clamp(18px, 4vw, 56px);
+
+  background-image: var(--bg);
+  background-size: cover;        /* 图片不拉伸，自动裁切 */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity .6s ease, transform .6s ease;
+  pointer-events: none;          /* 非当前项不可点 */
+}
+
+.slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* 遮罩：确保文字可读 */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.62), rgba(0,0,0,.18));
+}
+
+/* 文案层 */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  color: #fff;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 54px);
+  line-height: 1.1;
+  letter-spacing: .5px;
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  font-size: clamp(14px, 1.7vw, 18px);
+  line-height: 1.6;
+  opacity: .92;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 左右切换按钮 */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+}
+
+.nav:hover { background: rgba(0,0,0,.5); }
+.prev { left: 16px; }
+.next { right: 16px; }
+
+/* 圆点 */
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.45);
+  border: none;
+  cursor: pointer;
+}
+
+.dot.is-active {
+  background: rgba(255,255,255,.95);
+  transform: scale(1.15);
+}
+
+/* ===== 响应式：移动端高度缩减，文字简化但不消失 ===== */
+@media (max-width: 768px) {
+  .slider {
+    height: 46vh;
+    min-height: 280px; /* 高度缩减 */
+  }
+
+  .overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.20));
+  }
+
+  .subtitle {
+    /* 简化：行数限制，但仍显示 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .nav {
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+  }
+}

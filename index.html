@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- /*原来里面是en*/ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品牌官网-首页</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+     <!-- Banner / 首屏轮播 -->
+  <header class="hero" aria-label="首页轮播图">
+    <div class="slider" id="slider" role="region" aria-roledescription="carousel">
+      <div class="slides" id="slides">
+        <!-- 第1张 -->
+        <section class="slide is-active" style="--bg:url('../img/banner1.jpg');" aria-label="第 1 张">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title">Suncncy · 品牌核心价值</h1>
+            <p class="subtitle">用设计与技术，让每一次展示更有说服力。</p>
+            <a class="cta" href="#service">了解服务</a>
+          </div>
+        </section>
+
+        <!-- 第2张 -->
+        <section class="slide" style="--bg:url('../img/banner2.jpg');" aria-label="第 2 张">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title">企业展示 · 一屏抓住重点</h1>
+            <p class="subtitle">更清晰的信息层级，更稳定的视觉节奏。</p>
+            <a class="cta" href="#cases">查看案例</a>
+          </div>
+        </section>
+
+        <!-- 第3张 -->
+        <section class="slide" style="--bg:url('../img/banner3.jpg');" aria-label="第 3 张">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title">响应式体验 · 适配全端</h1>
+            <p class="subtitle">桌面端横向大 Banner，移动端高度缩减文字简化。</p>
+            <a class="cta" href="#contact">联系我们</a>
+          </div>
+        </section>
+      </div>
+
+      <button class="nav prev" id="prevBtn" aria-label="上一张">‹</button>
+      <button class="nav next" id="nextBtn" aria-label="下一张">›</button>
+
+      <div class="dots" id="dots" aria-label="轮播指示器"></div>
+    </div>
+  </header>
+    <script src="./js/banner.js"></script>
+</body>
+</html>

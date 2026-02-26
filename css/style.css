@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /* ===== 基础重置 ===== */
@@ -158,3 +159,25 @@ body { margin: 0; font-family: system-ui, -apple-system, "PingFang SC", "Microso
     font-size: 26px;
   }
 }
+=======
+table,th,td{
+    border: 1px dashed black;
+}
+table{
+    /*border-collapse: collapse;合并边框*/
+    /*border-collapse: separate; border-spacing: 2px;前面是边框分离，后面是设计边框和边框之间的距离*/
+    border-collapse: collapse;
+}
+th,td{
+/*    padding: 10px;内边框*/
+/*    text-align: center;文字处于内边框的中心位置*/
+    padding: 10px;
+    text-align: center;
+}
+/*tr:nth-child(odd){代表的是奇数，even代表的是偶数*/
+/*    background-color: #eee;*/
+/*} 用aspect-ratio：16/9；来进行视频的比例缩放
+用overscroll-behavior：none进行控制后面的窗口不进行滚动
+在div里面设置style=“user-select:none”就不会被用户选择
+*/
+>>>>>>> 2acdbb973bb79c3950ccd037b33b074c6a6490c6
